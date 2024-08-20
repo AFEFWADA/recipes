@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-function NavBar() {
+function NavBar({setSearch}) {
   return (
     <div>
        <Navbar expand="lg" className="bg-body-tertiary">
@@ -40,6 +40,7 @@ function NavBar() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={(event)=>setSearch(event.target.value)}
             />
             <Button variant="outline-success">Search</Button>
           </Form>
