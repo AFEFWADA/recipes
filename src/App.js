@@ -6,6 +6,7 @@ import Onerecipe from './components/Onerecipe';
 import NavBar from './layouts/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   // states 
@@ -32,8 +33,12 @@ useEffect(()=>{
     <div className="App">
       <NavBar setSearch={setSearch}/>
       <AllRecipes recipes={recipes} search={search}/>
+
     </div>
   );
+
+
+
 }
 
 export default App;
